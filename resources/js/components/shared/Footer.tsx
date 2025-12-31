@@ -70,63 +70,84 @@ const defaultLegalLinks = [
 const Footer = ({
     logo = {
         url: '/',
-        src: '/images/logo_scconas.jpg',
+        src: 'https://autenticacao.imt-ip.pt/resources/bf8nu/login/imt-theme/img/logo-IMT-pq.svg',
         alt: 'logo',
         title: '',
     },
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     sections = defaultSections,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     description = 'A collection of components for your startup business or side project.',
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     socialLinks = defaultSocialLinks,
-    copyright = '© Copyright 2025, All Rights Reserved by Scconas',
+    copyright = '© Copyright 2025, Todos os direitos reservados por IMt PT',
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     legalLinks = defaultLegalLinks,
 }: Footer7Props) => {
     return (
-        <section className="px-5 py-16 md:px-15 lg:px-30 bg-primary text-white   ">
+        <section className="bg-white px-5 py-16 text-black md:px-15 lg:px-30">
             <div className="container">
-                <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left     ">
-                    <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
+                <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
+                    <div className="flex w-full flex-col items-center justify-between gap-6 lg:items-start">
                         {/* Logo */}
                         <div className="flex items-center gap-2 lg:justify-start">
                             <a href={logo.url}>
-                                <img src={logo.src} alt={logo.alt} title={logo.title} className="h-10" />
+                                <img
+                                    src={logo.src}
+                                    alt={logo.alt}
+                                    title={logo.title}
+                                    className="h-10"
+                                />
                             </a>
-                            <h2 className="text-xl font-semibold">{logo.title}</h2>
+                            {/* <h2 className="text-xl font-semibold">
+                                {logo.title}
+                            </h2> */}
                         </div>
-                        <p className="max-w-[70%] text-sm text-white">{description}</p>
+                        {/* <p className="max-w-[70%] text-sm text-white">
+                            {description}
+                        </p>
                         <ul className="flex items-center space-x-6 text-white">
                             {socialLinks.map((social, idx) => (
-                                <li key={idx} className="font-medium hover:text-secondary">
-                                    <a href={social.href} aria-label={social.label}>
+                                <li
+                                    key={idx}
+                                    className="font-medium hover:text-secondary"
+                                >
+                                    <a
+                                        href={social.href}
+                                        aria-label={social.label}
+                                    >
                                         {social.icon}
                                     </a>
                                 </li>
                             ))}
-                        </ul>
+                        </ul> */}
                     </div>
-                    <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-20">
+                    {/* <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-20">
                         {sections.map((section, sectionIdx) => (
                             <div key={sectionIdx}>
-                                <h3 className="mb-4 font-bold">{section.title}</h3>
+                                <h3 className="mb-4 font-bold">
+                                    {section.title}
+                                </h3>
                                 <ul className="space-y-3 text-sm text-white/75">
                                     {section.links.map((link, linkIdx) => (
-                                        <li key={linkIdx} className="font-medium hover:text-secondary">
+                                        <li
+                                            key={linkIdx}
+                                            className="font-medium hover:text-secondary"
+                                        >
                                             <a href={link.href}>{link.name}</a>
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
+
+                    <p className="w-full text-center text-xs font-semibold md:text-right md:text-sm">
+                        Instituto da Mobilidade e dos Transportes, I.P.
+                    </p>
                 </div>
-                <div className="mt-8 flex flex-col justify-between gap-4 border-t py-8 text-xs font-medium text-white/65 md:flex-row md:items-center md:text-left">
-                    <p className="order-2 lg:order-1">{copyright}</p>
-                    <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row">
-                        {legalLinks.map((link, idx) => (
-                            <li key={idx} className="hover:text-secondary">
-                                <a href={link.href}> {link.name}</a>
-                            </li>
-                        ))}
-                    </ul>
+                <div className="mt-8 flex flex-col items-center justify-center gap-4 border-t py-8 text-xs font-medium text-black md:flex-row md:items-center md:text-left">
+                    <p className="order-2 lg:order-1 text-xs ">{copyright}</p>
                 </div>
             </div>
         </section>

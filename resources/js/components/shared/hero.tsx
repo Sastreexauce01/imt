@@ -104,7 +104,7 @@ const Hero = () => {
 
                             {/* Contenu */}
                             <div className="relative z-10 flex h-full flex-col">
-                                <div className="container flex flex-1 items-center px-4 lg:px-8">
+                                <div className="container flex flex-1 items-center px-2 pt-15 lg:px-8">
                                     <motion.div
                                         initial="hidden"
                                         whileInView="visible"
@@ -116,7 +116,7 @@ const Hero = () => {
                                         animate="visible"
                                         className="grid w-full items-center gap-8 text-white lg:grid-cols-1"
                                     >
-                                        <div className="flex flex-col items-center p-8 text-center lg:items-start lg:p-16 lg:text-left">
+                                        <div className="flex flex-col items-center p-4 text-center lg:items-start lg:p-16 lg:text-left">
                                             {/* Badge animé */}
                                             <motion.span
                                                 initial="hidden"
@@ -136,7 +136,7 @@ const Hero = () => {
                                             </motion.span>
 
                                             {/* Titre principal */}
-                                            <motion.h1 className="mb-6 text-5xl leading-tight font-black text-pretty lg:text-7xl">
+                                            <motion.h1 className="mb-6 text-4xl leading-tight font-black text-pretty lg:w-1/2 lg:text-7xl">
                                                 {item.title}
                                             </motion.h1>
 
@@ -171,7 +171,7 @@ const Hero = () => {
                                                     asChild
                                                 >
                                                     <a href={item.href}>
-                                                        Découvrir la formation
+                                                        Contate-nos
                                                         <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                                                     </a>
                                                 </Button>
@@ -181,7 +181,9 @@ const Hero = () => {
                                                     variant="outline"
                                                     className="h-14 border-2 border-white/40 bg-white/10 px-8 text-lg font-semibold text-white backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-white/60 hover:bg-white/20"
                                                 >
-                                                    Nous contacter
+                                                    <a href="/verifcation">
+                                                        Verificação de carta
+                                                    </a>
                                                 </Button>
                                             </motion.div>
                                         </div>

@@ -2,92 +2,106 @@ import { motion } from 'framer-motion';
 import { TestimonialsColumn } from './testimonials-columns';
 
 const testimonials = [
-  {
-    text: "J’ai choisi Scconas Assurances pour assurer mon véhicule, et je ne regrette pas ! Le service est rapide, les démarches simples, et j’ai été indemnisé sans complications après un accident mineur.",
-    image: "https://randomuser.me/api/portraits/men/15.jpg",
-    name: "Abdoulaye Traoré",
-    role: "Commerçant – Abidjan, Côte d’Ivoire",
-  },
-  {
-    text: "Scconas m’a beaucoup aidée lors d’un sinistre habitation. L’équipe a réagi immédiatement et m’a accompagnée jusqu’à la réparation complète de mon domicile. Un service client vraiment professionnel !",
-    image: "https://randomuser.me/api/portraits/women/12.jpg",
-    name: "Aminata Diop",
-    role: "Enseignante – Bouaké, Côte d’Ivoire",
-  },
-  {
-    text: "Grâce à Scconas, mon entreprise bénéficie d’une couverture complète pour nos véhicules et nos locaux. Les tarifs sont compétitifs et le suivi est sérieux. Je recommande sans hésiter.",
-    image: "https://randomuser.me/api/portraits/men/16.jpg",
-    name: "Jean-Benoît Koffi",
-    role: "Chef d’entreprise – Yamoussoukro, Côte d’Ivoire",
-  },
-  {
-    text: "J’ai souscrit une assurance santé chez Scconas, et j’ai été agréablement surprise par la qualité du service. Les remboursements sont rapides et transparents, sans paperasse inutile.",
-    image: "https://randomuser.me/api/portraits/women/19.jpg",
-    name: "Nadia Kouadio",
-    role: "Cadre RH – Abidjan, Côte d’Ivoire",
-  },
-  {
-    text: "Scconas Assurances m’a accompagné dans la protection de mon projet agricole. En cas d’imprévus climatiques, j’ai pu bénéficier d’un soutien rapide et efficace. C’est une vraie sécurité.",
-    image: "https://randomuser.me/api/portraits/men/18.jpg",
-    name: "Samuel N’Guessan",
-    role: "Entrepreneur agricole – Korhogo, Côte d’Ivoire",
-  },
-  {
-    text: "En tant que jeune entrepreneure, j’avais besoin d’une assurance fiable pour mon activité. Scconas m’a proposé une offre adaptée à mon budget et à mes besoins. Je me sens vraiment en confiance.",
-    image: "https://randomuser.me/api/portraits/women/14.jpg",
-    name: "Clarisse Kouassi",
-    role: "Fondatrice d’une boutique en ligne – Abidjan, Côte d’Ivoire",
-  },
-  {
-    text: "Je voyage souvent pour le travail, et avec l’assurance voyage de Scconas, je pars serein. En cas de souci, je sais que je peux compter sur leur assistance 24h/24.",
-    image: "https://randomuser.me/api/portraits/men/19.jpg",
-    name: "Moussa Coulibaly",
-    role: "Consultant – San Pedro, Côte d’Ivoire",
-  },
-  {
-    text: "Scconas Assurances m’a permis de protéger ma maison et ma famille à un prix abordable. Le contrat est clair et le service client est toujours disponible pour répondre à mes questions.",
-    image: "https://randomuser.me/api/portraits/women/21.jpg",
-    name: "Ruth Adéyémi",
-    role: "Fonctionnaire – Daloa, Côte d’Ivoire",
-  },
-  {
-    text: "J’ai été impressionné par la réactivité de Scconas lors d’un accident. Tout a été géré en moins d’une semaine. C’est rassurant de savoir qu’on peut compter sur son assurance.",
-    image: "https://randomuser.me/api/portraits/men/20.jpg",
-    name: "Yao Kouamé",
-    role: "Chauffeur professionnel – Abidjan, Côte d’Ivoire",
-  },
+    {
+        text: 'Consegui a minha carta em apenas 20 dias com a Scconas! Tinha reprovado duas vezes antes, mas o método deles é incrível. O instrutor identificou os meus erros e corrigiu tudo rapidamente.',
+        image: 'https://randomuser.me/api/portraits/men/32.jpg',
+        name: 'Miguel Santos',
+        role: 'Comerciante – Lisboa, Portugal',
+    },
+    {
+        text: 'Precisava urgentemente da carta para o meu novo emprego. A Scconas salvou-me! Formação intensiva aos fins de semana e passei à primeira. Recomendo a toda a gente com pressa.',
+        image: 'https://randomuser.me/api/portraits/women/44.jpg',
+        name: 'Ana Rodrigues',
+        role: 'Gestora de projeto – Porto, Portugal',
+    },
+    {
+        text: 'Depois de chumbar no exame, estava desanimado. A equipa da Scconas analisou os meus erros, fez aulas focadas e em 15 dias tinha a carta na mão. Valeu cada cêntimo!',
+        image: 'https://randomuser.me/api/portraits/men/52.jpg',
+        name: 'João Silva',
+        role: 'Engenheiro – Braga, Portugal',
+    },
+    {
+        text: 'A formação express da Scconas é perfeita para quem trabalha. Aulas flexíveis, simulador profissional e acompanhamento personalizado. Tirei a carta sem stress em 3 semanas.',
+        image: 'https://randomuser.me/api/portraits/women/65.jpg',
+        name: 'Beatriz Costa',
+        role: 'Enfermeira – Coimbra, Portugal',
+    },
+    {
+        text: 'Já tinha as bases mas faltava-me confiança. O coaching individual da Scconas deu-me a segurança que precisava. Passei à segunda tentativa com 85% de aproveitamento!',
+        image: 'https://randomuser.me/api/portraits/men/41.jpg',
+        name: 'Ricardo Pereira',
+        role: 'Empresário – Faro, Portugal',
+    },
+    {
+        text: 'Como mãe ocupada, não tinha tempo para uma escola tradicional. A Scconas adaptou-se aos meus horários e consegui a carta em tempo recorde. Serviço 5 estrelas!',
+        image: 'https://randomuser.me/api/portraits/women/28.jpg',
+        name: 'Sofia Martins',
+        role: 'Professora – Setúbal, Portugal',
+    },
+    {
+        text: 'Reprovei três vezes noutras escolas. Na Scconas, percebi finalmente onde errava. O método intensivo funciona mesmo. Em 2 semanas estava pronto e passei!',
+        image: 'https://randomuser.me/api/portraits/men/67.jpg',
+        name: 'Pedro Oliveira',
+        role: 'Consultor – Aveiro, Portugal',
+    },
+    {
+        text: 'A formação acelerada é ideal para quem já sabe conduzir mas precisa de aperfeiçoar. Instrutores experientes, horários flexíveis e resultados garantidos. Top!',
+        image: 'https://randomuser.me/api/portraits/women/33.jpg',
+        name: 'Mariana Fernandes',
+        role: 'Arquiteta – Viseu, Portugal',
+    },
+    {
+        text: 'Estava sem carta há 2 anos por ter chumbado. A Scconas deu-me uma segunda oportunidade com um programa personalizado. Hoje conduzo com total confiança!',
+        image: 'https://randomuser.me/api/portraits/men/29.jpg',
+        name: 'Tiago Sousa',
+        role: 'Motorista profissional – Leiria, Portugal',
+    },
 ];
-
-
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6, 9);
 
 const Testimonials = () => {
     return (
-        <section className="relative my-5 bg-primary/80  p-5  md:hidden">
-            <div className="z-10 container mx-auto">
+        <section className="relative my-5 bg-primary/20 p-5">
+            <div className="m z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{
+                        duration: 0.8,
+                        delay: 0.1,
+                        ease: [0.16, 1, 0.3, 1],
+                    }}
                     viewport={{ once: true }}
-                    className="mx-auto flex  flex-col items-center justify-center w-full"
+                    className="mx-auto flex w-full flex-col items-center justify-center"
                 >
-                    {/* <div className="flex justify-center">
-                        <div className="rounded-lg border px-4 py-1">Temoignages</div>
-                    </div> */}
-
-                    <h2 className="mt-5 text-xl font-bold  text-white tracking-tighter sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl">
-                    Ce que les gens  <span className='text-secondary'>pensent</span> de nous
+                    <h2 className="mt-5 text-xl font-bold tracking-tighter text-white sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl">
+                        Que pessoas {''}
+                        <span className="text-primary">pensar</span> de nós
                     </h2>
-                    <p className="mt-5 text-center opacity-75  lg:w-2/3  text-sm   text-gray-200 ">Nos valeurs sont le fondement de notre identité, guidant nos actions et nos décisions vers un avenir empreint d'intégrité, de respect et de solidarité..</p>
+                    <p className="mt-5 text-center text-sm text-white opacity-75 lg:w-2/3">
+                        Os nossos valores são a base da nossa identidade,
+                        orientando as nossas ações e decisões rumo a um futuro
+                        marcado pela integridade, respeito e solidariedade.
+                    </p>
                 </motion.div>
 
-                <div className="mt-10 flex max-h-[740px] justify-center gap-6 overflow-hidden  [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
-                    <TestimonialsColumn testimonials={firstColumn} duration={15} />
-                    <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
-                    <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
+                <div className="mt-10 flex max-h-[740px] justify-center gap-6 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
+                    <TestimonialsColumn
+                        testimonials={firstColumn}
+                        duration={15}
+                    />
+                    <TestimonialsColumn
+                        testimonials={secondColumn}
+                        className="hidden md:block"
+                        duration={19}
+                    />
+                    <TestimonialsColumn
+                        testimonials={thirdColumn}
+                        className="hidden lg:block"
+                        duration={17}
+                    />
                 </div>
             </div>
         </section>

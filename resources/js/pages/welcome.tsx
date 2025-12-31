@@ -1,19 +1,30 @@
-import { Footer } from '@/components/shared/Footer';
+import { FeatureQuality } from '@/components/shared/FeatureQuality';
 import { Hero } from '@/components/shared/hero';
-import { Navbar } from '@/components/shared/navbar5';
 import ParticlesBackground from '@/components/shared/ParticlesBackground';
-import ScrollToTop from '@/components/shared/scroll-top';
-import Testimonials from '@/components/shared/Testimonials';
+import { WhyUs } from '@/components/shared/whyUs';
+import { WhyWork } from '@/components/shared/WhyWork';
+
 import { Toaster } from '@/components/ui/sonner';
+import Layout from '@/layouts/layout';
 import { type SharedData } from '@/types';
 import { Head, usePage } from '@inertiajs/react';
+import { features } from './about';
 
 export default function Welcome() {
     const { auth } = usePage<SharedData>().props;
     console.log(auth);
 
+    // const data = [
+    //     { label: 'Years on the Market', value: 20 },
+    //     { label: 'Award Won', value: 20 },
+    //     { label: 'Owned Vehicles', value: 20 },
+    //     { label: 'Num Of Teachers', value: 20 },
+    //     { label: 'Training Hours', value: 20 },
+    //     { label: 'Graduates', value: 20 },
+    // ];
+
     return (
-        <div className="relative min-h-screen overflow-hidden bg-transparent">
+        <Layout>
             <Head title="Welcome">
                 <link rel="preconnect" href="https://fonts.bunny.net" />
                 <link
@@ -22,22 +33,18 @@ export default function Welcome() {
                 />
             </Head>
 
-            <Navbar />
-            <Hero />
-
-            <div className="relative z-0"></div>
-
             <ParticlesBackground />
             <Toaster position="top-center" className="bg-white text-primary" />
-            {/* Background avec overlay */}
-            <div className="fixed inset-0 -z-10 bg-[url(/img/hero_movie.gif)] bg-cover bg-fixed bg-center bg-no-repeat" />
 
-            {/* Overlay optionnel pour améliorer la lisibilité */}
-            <div className="fixed inset-0 -z-10 bg-black/70" />
-
-            <Testimonials />
-            <ScrollToTop />
-            <Footer />
-        </div>
+            <Hero />
+            <FeatureQuality />
+            <WhyUs />
+            <WhyWork
+                title="Os nossos valores"
+                features={features}
+                description="Na nossa empresa, os nossos valores baseiam-se na confiança, profissionalismo e relações próximas, para oferecer a cada cliente um apoio fiável e personalizado."
+            />
+            <div></div>
+        </Layout>
     );
 }

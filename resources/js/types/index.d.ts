@@ -28,6 +28,11 @@ export interface SharedData {
     auth: Auth;
     sidebarOpen: boolean;
     [key: string]: unknown;
+    flash?: {
+        success?: string;
+        error?: string;
+        info?: string;
+    };
 }
 
 export interface User {

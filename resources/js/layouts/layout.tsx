@@ -1,36 +1,63 @@
-// import { Footer } from '@/components/shared/Footer';
-// import Navbar from '@/components/shared/Navbar';
-// import ParticlesBackground from '@/components/shared/ParticlesBackground';
-// import { Toaster } from '@/components/ui/sonner';
-// import useFlashMessages from '@/hooks/FlashMessages';
+// layouts/layout.tsx
+import ClickSpark from '@/components/shared/ClickSpark';
+import { Faqs } from '@/components/shared/Faqs';
+import { Footer } from '@/components/shared/Footer';
+import { Navbar } from '@/components/shared/navbar5';
+import ParticlesBackground from '@/components/shared/ParticlesBackground';
+import ScrollToTop from '@/components/shared/scroll-top';
+import Testimonials from '@/components/shared/Testimonials';
+import useFlashMessages from '@/hooks/FlashMessages';
+import { ReactNode } from 'react';
+import { Toaster } from 'sonner';
 
-// import { ReactNode } from 'react';
+interface typeProps {
+    children: ReactNode;
+}
 
-// interface LayoutProps {
-//     children: ReactNode;
-// }
+const Layout = ({ children }: typeProps) => {
+    useFlashMessages();
 
-// const Layout = ({ children }: LayoutProps) => {
-//     useFlashMessages();
-//     return (
-//         <div className="relative min-h-screen overflow-hidden bg-transparent">
-//             <ParticlesBackground />
-//             <Toaster position="top-center" />
-//             {/* Background avec overlay */}
-//             <div className="fixed inset-0 -z-10 bg-[url(/img/hero_movie.gif)] bg-cover bg-fixed bg-center bg-no-repeat" />
+    return (
+        <div className="relative min-h-screen overflow-hidden bg-transparent">
+            <ParticlesBackground />
 
-//             {/* Overlay optionnel pour améliorer la lisibilité */}
-//             <div className="fixed inset-0 -z-10 bg-black/70" />
+            {/* ✅ UN SEUL Toaster ici */}
+            <Toaster
+                position="top-center"
+                richColors
+                closeButton
+                duration={4000}
+            />
 
-//             <Navbar />
+            <ClickSpark
+                sparkColor="#C7D100"
+                sparkSize={12}
+                sparkRadius={15}
+                sparkCount={8}
+                duration={500}
+            >
+                {/* Overlay avec motif */}
+                <div
+                    className="absolute inset-0 opacity-10"
+                    style={{
+                        backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+                        backgroundSize: '40px 40px',
+                    }}
+                />
 
-//             <Toaster position="top-center" className="bg-white text-primary" />
+                <div className="fixed inset-0 -z-10 bg-black/70" />
 
-//             <main className="relative z-0">{children}</main>
+                <Navbar />
 
-//             <Footer />
-//         </div>
-//     );
-// };
+                {children}
 
-// export default Layout;
+                <Testimonials />
+                <Faqs />
+                <Footer />
+                <ScrollToTop />
+            </ClickSpark>
+        </div>
+    );
+};
+
+export default Layout;

@@ -1,10 +1,4 @@
 'use client';
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import {
     NavigationMenu,
@@ -22,52 +16,34 @@ import {
 } from '@/components/ui/sheet';
 // import { features, navLinks } from '@/data/nav';
 import { cn } from '@/lib/utils';
-import { login } from '@/routes';
 import { Link, usePage } from '@inertiajs/react';
 import { MenuIcon } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-export const features = [
-    {
-        title: 'Dashboard',
-        description: 'Overview of your activity',
-        href: '#',
-    },
-    {
-        title: 'Analytics',
-        description: 'Track your performance',
-        href: '#',
-    },
-    {
-        title: 'Settings',
-        description: 'Configure your preferences',
-        href: '#',
-    },
-    {
-        title: 'Integrations',
-        description: 'Connect with other tools',
-        href: '#',
-    },
-];
+
 
 export const navLinks = [
-
-   {
+    {
         href: '#acceuil',
-        name: 'Home',
+        name: 'Bem-vindo',
     },
 
+    {
+        href: '/verifcation',
+        name: 'Verificação de carta',
+    },
     {
         href: '/about',
-        name: 'Qui sommes-nous ?',
+        name: 'Sobre nós',
     },
 
-    
     {
         href: '/contact',
-        name: 'Contact',
+        name: 'Contato',
     },
 ];
+
+
 
 const Navbar = () => {
     const { url } = usePage();
@@ -125,7 +101,7 @@ const Navbar = () => {
                                             className={cn(
                                                 navigationMenuTriggerStyle(),
                                                 isActive &&
-                                                    'font-bold text-secondary', // ✅ lien actif en gras
+                                                    'font-bold text-primary', // ✅ lien actif en gras
                                                 'bg-transparent transition-all duration-100 ease-in',
                                             )}
                                         >
@@ -137,12 +113,9 @@ const Navbar = () => {
                         </NavigationMenuList>
                     </NavigationMenu>
 
-                    <Link
-                        href={login()}
-                        className="hidden cursor-pointer items-center gap-4 lg:flex"
-                    >
+                    <Link href="/contact" className="hidden cursor-pointer items-center gap-4 lg:flex">  
                         <Button className="cursor-pointer bg-primary text-secondary">
-                            Mon Espace
+                            Contate-nos
                         </Button>
                     </Link>
                     <Sheet>
@@ -171,51 +144,6 @@ const Navbar = () => {
                             </SheetHeader>
 
                             <div className="flex flex-col p-4">
-                                <Accordion
-                                    type="single"
-                                    collapsible
-                                    className="mt-4 mb-2"
-                                >
-                                    <AccordionItem
-                                        value="solutions"
-                                        className="border-none"
-                                    >
-                                        <AccordionTrigger className="text-base hover:no-underline">
-                                            Souscrire en ligne
-                                        </AccordionTrigger>
-                                        <AccordionContent>
-                                            <div className="grid md:grid-cols-2">
-                                                {features.map(
-                                                    (feature, index) => (
-                                                        <a
-                                                            href={feature.href}
-                                                            key={index}
-                                                            className="rounded-md p-3 transition-colors hover:bg-muted/70"
-                                                        >
-                                                            <div
-                                                                key={
-                                                                    feature.title
-                                                                }
-                                                            >
-                                                                <p className="mb-1 font-semibold text-foreground">
-                                                                    {
-                                                                        feature.title
-                                                                    }
-                                                                </p>
-                                                                <p className="text-sm text-muted-foreground">
-                                                                    {
-                                                                        feature.description
-                                                                    }
-                                                                </p>
-                                                            </div>
-                                                        </a>
-                                                    ),
-                                                )}
-                                            </div>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                </Accordion>
-
                                 <div className="flex flex-col gap-6">
                                     {navLinks.map((item, index) => (
                                         <Link
@@ -229,10 +157,10 @@ const Navbar = () => {
                                 </div>
                                 <Link
                                     className="mt-6 flex flex-col gap-4"
-                                    href={login()}
+                                    href="/contact"
                                 >
                                     <Button className="cursor-pointer bg-primary text-secondary">
-                                        Mon Espace
+                                        Contate-nos
                                     </Button>
                                 </Link>
                             </div>
