@@ -1,5 +1,6 @@
 import { Footer } from '@/components/shared/Footer';
-import { Link } from '@inertiajs/react';
+// import { Link } from '@inertiajs/react';
+
 
 const verification = () => {
     // const methodes = [
@@ -48,7 +49,7 @@ const verification = () => {
                 <div className="flex w-full flex-col justify-between gap-10 lg:flex-row">
                    
                         <div className="flex flex-col items-center gap-5 c">
-                            <p className="text-2xs text-center lg:text-xl">
+                            <p className="text-sm text-center lg:text-xl">
                                 Entrar com{' '}
                                 <b className="text-[#6C757D]">
                                     Cartão de Cidadão
@@ -63,14 +64,14 @@ const verification = () => {
                             <img
                                 src="https://autenticacao.imt-ip.pt/resources/bf8nu/login/imt-theme/img/autenticacaogov.png"
                                 alt=""
-                                className="h-28 w-full rounded-md border-1 border-green-600 object-center transition-all duration-150 ease-in-out hover:border-blue-600 lg:max-w-100"
+                                className="h-28 w-full rounded-md border-1 border-green-600 object-center transition-all duration-150 ease-in-out hover:border-blue-600 lg:max-w-64"
                             />
                         </div>
                   
 
                    
                         <div className="flex flex-col items-center gap-5">
-                            <p className="text-2xs text-center lg:text-xl">
+                            <p className="text-sm text-center lg:text-xl">
                                 Entrar com {''}
                                 <b className="text-[#6C757D]">
                                     Número de Identificação Fiscal
@@ -80,7 +81,7 @@ const verification = () => {
                             <img
                                 src="https://autenticacao.imt-ip.pt/resources/bf8nu/login/imt-theme/img/logo-at.png"
                                 alt=""
-                                className="h-28 max-w-100 rounded-md border-1 border-green-600 object-center transition-all duration-150 ease-in-out hover:border-blue-600"
+                                className="h-28 max-w-64 rounded-md border-1 border-green-600 object-center transition-all duration-150 ease-in-out hover:border-blue-600"
                             />
                         </div>
                
